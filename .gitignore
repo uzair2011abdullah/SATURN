@@ -1,0 +1,25 @@
+# SECRETS - never commit
+.env
+backup_secrets.env
+
+# VIRTUAL ENV
+.venv/
+venv/
+env/
+
+# BUILD ARTEFACTS
+build/
+dist/
+*.egg-info/
+
+# PYTHON CACHE
+__pycache__/
+*.py[cod]
+*.pyd
+
+# BACKUP ARTEFACTS
+*.zip
+
+# IDE
+.idea/
+.vscode/

@@ -1,0 +1,15 @@
+﻿        f"{boot['app']} v{boot['version']} Â· {boot['local_model']} Â· {boot['online_model']}",
+        boot, OK,
+    )
+    STORE.emit(
+        "boot", "â—ˆ", "Supabase",
+        "connected" if boot["supabase_ok"]
+        else ("client created" if boot["supabase_client"] else "not configured"),
+        {
+            "url_loaded": boot["supabase_url"],
+            "key_loaded": boot["supabase_key"],
+            "client": boot["supabase_client"],
+            "connection": boot["supabase_ok"],
+        },
+        OK if boot["supabase_ok"] else WARN,
+    )
